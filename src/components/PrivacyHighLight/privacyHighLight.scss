@@ -1,0 +1,44 @@
+@import "/src/styles/variables.scss";
+
+.privacyHighLight {
+  padding: 9px 0 24px;
+  background: linear-gradient(
+    85deg,
+    #162770 -9.75%,
+    #382361 16.28%,
+    #8a357d 40.6%,
+    #e64996 66.98%,
+    #eb463d 91.3%,
+    #ed6550 119.07%
+  );
+
+  &CardData {
+    p {
+      color: $color-white-0 !important;
+      @include font-med($fs: 1.8rem);
+      line-height: 130%;
+      text-align: center;
+      padding-top: 0 !important;
+
+      span {
+        color: $color-white-0 !important;
+        @include font-bold($fs: 1.8rem);
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 10px 0 24px;
+
+    &CardData {
+      p {
+        @include font-med($fs: 1.4rem);
+
+        span {
+          color: $color-white-0 !important;
+          @include font-bold($fs: 1.4rem);
+        }
+      }
+    }
+  }
+}

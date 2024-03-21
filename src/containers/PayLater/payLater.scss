@@ -1,0 +1,132 @@
+@import "/src/styles/variables.scss";
+
+.payLater {
+  // finance
+  .payLaterFinance {
+    background: $color-white-0;
+
+    &Content {
+      @include d-flex(space-between);
+      margin-top: 40px;
+      gap: 83px;
+    }
+
+    &Data {
+      @include d-flex(space-between);
+      gap: 12px;
+      flex-direction: column;
+      flex-basis: 54%;
+    }
+
+    &SpecialText {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      line-height: 160%;
+    }
+
+    &Image {
+      flex-basis: 53%;
+
+      img {
+        width: 550px;
+      }
+    }
+  }
+
+  // buyer
+  .paymentBuyer {
+    background: $color-white-0;
+    border-top: 1px solid $color-gray-3;
+
+    &Content {
+      @include d-flex(space-between);
+      flex-direction: row-reverse;
+      gap: 83px;
+      padding-top: 40px;
+    }
+
+    &Data {
+      flex-basis: 54%;
+
+      h4 {
+        margin-bottom: 12px;
+      }
+    }
+
+    &SpecialText {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      line-height: 160%;
+      padding-top: 4px;
+    }
+
+    &FrameIcon {
+      @include d-flex();
+      gap: 12px;
+      margin-bottom: 8px;
+
+      &:first-child {
+        margin-top: 12px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &Image {
+      flex-basis: 52.4%;
+
+      img {
+        width: 550px;
+      }
+    }
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    // .paymentBuyer
+    .paymentBuyer {
+      h2 {
+        margin-bottom: 40px !important;
+      }
+
+      &SpecialText {
+        @include font-reg(1.4rem);
+        line-height: 150%;
+      }
+
+      &Content {
+        flex-direction: column;
+        gap: 24px;
+        padding-top: 0;
+      }
+
+      &Image {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .payment {
+      &LeftImg {
+        display: none;
+      }
+
+      &RightImg {
+        display: none;
+      }
+
+      &Data {
+        p {
+          @include font-med(1.4rem);
+        }
+      }
+    }
+  }
+}

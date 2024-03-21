@@ -1,0 +1,164 @@
+@import "src/styles/variables.scss";
+@import "src/styles/common.scss";
+
+// Reason Section
+
+.reasonStatistics {
+  background: $linear-gradient-10 !important;
+
+  &Gradient {
+    background: $linear-gradient-16 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  &Wrapper {
+    @include d-flex(center);
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding-top: 32px;
+  }
+
+  &Card {
+    display: flex;
+    flex-basis: 31.1%;
+
+    span {
+      &:first-of-type {
+        height: 100% !important;
+      }
+    }
+  }
+
+  &Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    h3 {
+      @include font-med($fs: 2rem);
+      line-height: 130%;
+      color: $color-black-0;
+      max-width: 209px;
+      font-family: EchoesSansMedium;
+    }
+  }
+
+  &Para {
+    p {
+      color: $color-grey-0;
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+      max-width: 309px;
+    }
+  }
+
+  &FirstCard {
+    border-radius: 8px;
+    background: var(--White, $color-white-0);
+    box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.06);
+    padding: 32px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    height: 100%;
+
+    .img_gif {
+      display: none;
+    }
+
+    .img_png {
+      width: 60px;
+      display: block;
+    }
+
+    &:hover {
+      transition: all 0.5s ease;
+      box-shadow: 2px 24px 96px 0px rgba(0, 0, 0, 0.09);
+
+      .img_png {
+        display: none;
+      }
+
+      .img_gif {
+        display: block;
+        width: 60px;
+      }
+    }
+  }
+
+  .linear {
+    padding: 1px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      background: $linear-gradient-3;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &Wrapper {
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 24px;
+    }
+
+    &FirstCard {
+      padding: 24px;
+      min-height: 0;
+    }
+
+    &Card {
+      width: 100%;
+      display: block;
+    }
+
+    &Title {
+      margin-bottom: 14px !important;
+
+      h3 {
+        @include font-med($fs: 1.8rem);
+        max-width: 199px;
+      }
+    }
+
+    &Para {
+      p {
+        max-width: 100%;
+        @include font-reg($fs: 1.4rem);
+        line-height: 150%;
+        padding-top: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    background: url(../../assets/images/payFinance/reasonStatisticsBgImg.png),
+      $linear-gradient-10 !important;
+    background-repeat: no-repeat !important;
+    background-position: 100% 100% !important;
+  }
+}
+
+.amazonSellerCardHeading {
+  max-width: 596px;
+  margin: 0 auto;
+}
+
+.amazonSellerTitleFlex {
+  display: flex !important;
+  flex-direction: column-reverse !important;
+  align-items: inherit !important;
+}
+
+.amazonSellerTitleHeading {
+  max-width: 253px !important;
+  padding: 16px 0 12px !important;
+}
+
+.amazonSellerWrapperGap {
+  gap: 24px !important;
+}

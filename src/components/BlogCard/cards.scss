@@ -1,0 +1,160 @@
+@import "src/styles/variables.scss";
+
+.blogsCard {
+  &Section {
+    border-radius: 8px;
+    border: 1px solid $color-gray-4;
+    background: #fff;
+    box-shadow: 2px 2px 30px 0px rgba(0, 0, 0, 0.04);
+    max-width: 373px;
+    @include d-flex(flex-start);
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &Title {
+    text-align: unset !important;
+  }
+  &Container:not(:last-of-type) {
+    padding: 30px 0 100px;
+  }
+  &Heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+
+    p {
+      font-family: EchoesSansMedium;
+      @include font-med($fs: 2.4rem);
+      line-height: 130%;
+      color: $color-black-0;
+    }
+  }
+
+  &Button {
+    button {
+      color: $color-darkBlue-0;
+      @include font-med($fs: 1.4rem);
+      padding: 10px 18px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      border-radius: 4px;
+      border: 1px solid $color-gray-3;
+      background: #fff;
+    }
+  }
+
+  &Image {
+    width: 100%;
+    position: relative;
+    max-height: 200px;
+    max-width: 100%;
+    overflow: hidden;
+
+    img {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &Contents {
+    flex-grow: 1;
+    @include d-flex(flex-start);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 16px;
+  }
+
+  &Category {
+    @include font-med($fs: 1.4rem);
+    line-height: 150%;
+    color: $color-Pink-0;
+    padding-bottom: 8px;
+    display: block;
+    width: 100%;
+  }
+
+  &Title {
+    @include font-semi-bold($fs: 1.6rem);
+    line-height: 160%;
+    color: $color-black-0;
+    max-width: 100%;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  &Profile {
+    display: flex;
+    gap: 8px;
+    padding-top: 16px;
+    width: 100%;
+
+    &Content {
+      span {
+        @include font-med($fs: 1.6rem);
+        line-height: 160%;
+        color: $color-black-0;
+        padding-bottom: 4px;
+        display: block;
+      }
+
+      p {
+        @include font-reg($fs: 1.2rem);
+        line-height: 150%;
+        color: $color-grey-0;
+      }
+    }
+
+    &Image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+  }
+
+  &ViewMore {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    cursor: pointer;
+    margin: 0 auto;
+
+    span {
+      @include font-med($fs: 1.6rem);
+      background: var(
+        --G-4,
+        linear-gradient(
+          90deg,
+          #131d56 -1.66%,
+          #33145d 26.58%,
+          #63166a 53.17%,
+          #a4267b 72.03%,
+          #db327c 87.36%,
+          #eb4b46 103.24%
+        )
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &Section {
+      width: 100%;
+      max-width: 100%;
+    }
+    &Container:not(:last-of-type) {
+      padding: 20px 0 40px;
+    }
+  }
+}

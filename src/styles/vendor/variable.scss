@@ -1,0 +1,321 @@
+// color
+$color-white-0: #ffffff;
+$color-white-1: #f7f7f7;
+$color-white-2: #fffafc;
+$color-white-3: #e6e6e6;
+
+$color-black-0: #222529;
+$color-black-1: #000000;
+
+$color-darkBlue-0: #2e173b;
+
+$color-grey-0: #4e4e4e;
+$color-grey-1: #888;
+$color-grey-2: #dbdbeb;
+
+$color-gray-0: #f5f5f5;
+$color-gray-3: #e8e8e4;
+$color-gray-4: #f0f0f0;
+$color-gray-5: #f9f9f9;
+
+$color-darkBlue-1: #19147b;
+$color-darkBlue-2: #16277020;
+$color-darkBlue-3: #131d56;
+$color-Pink-0: #e54696;
+
+$linear-gradient-0: linear-gradient(
+  90deg,
+  #162770 42.26%,
+  #382361 53.4%,
+  #8a357d 63.8%,
+  #e64996 75.08%,
+  #eb463d 85.48%,
+  #ed6550 97.36%
+);
+
+$linear-gradient-1: var(
+  --G-4,
+  linear-gradient(
+    90deg,
+    #131d56 -1.66%,
+    #33145d 26.58%,
+    #63166a 53.17%,
+    #a4267b 72.03%,
+    #db327c 87.36%,
+    #eb4b46 103.24%
+  )
+);
+
+$linear-gradient-2: linear-gradient(
+  90deg,
+  rgba(22, 39, 112, 0.08) -3.98%,
+  rgba(56, 35, 97, 0.08) 19.05%,
+  rgba(138, 53, 125, 0.08) 40.57%,
+  rgba(230, 73, 150, 0.08) 63.91%,
+  rgba(235, 70, 61, 0.08) 85.43%,
+  rgba(237, 101, 80, 0.08) 110%
+);
+
+$linear-gradient-3: var(
+  --G-3,
+  linear-gradient(
+    90deg,
+    #131d56 -1.65%,
+    #33145d 19%,
+    #63166a 38.29%,
+    #a4267b 59.21%,
+    #db327c 78.5%,
+    #eb4b46 100.54%
+  )
+);
+
+$linear-gradient-4: linear-gradient(
+  90deg,
+  #162770 5.29%,
+  #382361 22.64%,
+  #8a357d 38.85%,
+  #e64996 56.42%,
+  #eb463d 72.63%,
+  #ed6550 91.14%
+);
+$linear-gradient-5: linear-gradient(
+  90deg,
+  #162770 13.39%,
+  #382361 27.81%,
+  #8a357d 41.29%,
+  #e64996 55.91%,
+  #eb463d 69.38%,
+  #ed6550 84.78%
+);
+
+$linear-gradient-6: var(
+  --G-2,
+  linear-gradient(
+    90deg,
+    #162770 -3.98%,
+    #382361 19.05%,
+    #8a357d 40.57%,
+    #e64996 63.91%,
+    #eb463d 85.43%,
+    #ed6550 110%
+  )
+);
+
+$linear-gradient-7: linear-gradient(
+  90deg,
+  #162770 -14.35%,
+  #382361 8.76%,
+  #8a357d 30.34%,
+  #e64996 53.76%,
+  #eb463d 75.35%,
+  #ed6550 100%
+);
+
+$linear-gradient-8: linear-gradient(
+  90deg,
+  rgba(22, 39, 112, 0) 0%,
+  rgba(22, 39, 112, 0.5) 13.39%,
+  rgba(56, 35, 97, 0.5) 27.46%,
+  rgba(138, 53, 125, 0.5) 41.54%,
+  rgba(230, 73, 150, 0.5) 56.71%,
+  rgba(235, 70, 61, 0.5) 70.57%,
+  rgba(237, 101, 80, 0.5) 85.52%,
+  rgba(237, 101, 80, 0) 100%
+);
+
+$linear-gradient-9: linear-gradient(
+  89deg,
+  rgba(22, 39, 112, 0.05) -3.4%,
+  rgba(56, 35, 97, 0.05) 25.55%,
+  rgba(138, 53, 125, 0.05) 52.61%,
+  rgba(230, 73, 150, 0.05) 81.95%,
+  rgba(235, 70, 61, 0.05) 109.01%,
+  rgba(237, 101, 80, 0.05) 139.91%
+);
+
+$linear-gradient-10: linear-gradient(
+    85deg,
+    rgba(22, 39, 112, 0.05) -9.75%,
+    rgba(56, 35, 97, 0.05) 16.28%,
+    rgba(138, 53, 125, 0.05) 40.6%,
+    rgba(230, 73, 150, 0.05) 66.98%,
+    rgba(235, 70, 61, 0.05) 91.3%,
+    rgba(237, 101, 80, 0.05) 119.07%
+  ),
+  #fff;
+
+$linear-gradient-11: linear-gradient(
+  90deg,
+  #131d56 58.64%,
+  #33145d 67.1%,
+  #63166a 75.01%,
+  #a4267b 83.58%,
+  #db327c 91.49%,
+  #eb4b46 100.52%
+);
+
+$linear-gradient-12: linear-gradient(
+  90deg,
+  #162770 33.54%,
+  #382361 45.17%,
+  #8a357d 56.03%,
+  #e64996 67.81%,
+  #eb463d 78.68%,
+  #ed6550 91.08%
+);
+
+$linear-gradient-13: linear-gradient(
+  90deg,
+  #131d56 35.75%,
+  #33145d 48.84%,
+  #63166a 61.07%,
+  #a4267b 74.34%,
+  #db327c 86.57%,
+  #eb4b46 100.54%
+);
+$linear-gradient-14: linear-gradient(
+    85deg,
+    rgba(22, 39, 112, 0.03) -9.75%,
+    rgba(56, 35, 97, 0.03) 16.28%,
+    rgba(138, 53, 125, 0.03) 40.6%,
+    rgba(230, 73, 150, 0.03) 66.98%,
+    rgba(235, 70, 61, 0.03) 91.3%,
+    rgba(237, 101, 80, 0.03) 119.07%
+  ),
+  #fff;
+
+$linear-gradient-14: linear-gradient(
+  90deg,
+  #162770 29.65%,
+  #382361 46.35%,
+  #8a357d 61.95%,
+  #e64996 78.87%,
+  #eb463d 94.48%,
+  #ed6550 112.29%
+);
+$linear-gradient-15: linear-gradient(
+    90deg,
+    rgba(22, 39, 112, 0.06) -3.98%,
+    rgba(56, 35, 97, 0.06) 19.05%,
+    rgba(138, 53, 125, 0.06) 40.57%,
+    rgba(230, 73, 150, 0.06) 63.91%,
+    rgba(235, 70, 61, 0.06) 85.43%,
+    rgba(237, 101, 80, 0.06) 110%
+  ),
+  #fff;
+$linear-gradient-16: linear-gradient(
+  90deg,
+  #162770 37.19%,
+  #382361 53.36%,
+  #8a357d 68.47%,
+  #e64996 84.86%,
+  #eb463d 99.97%,
+  #ed6550 117.23%
+);
+
+$linear-gradient-17: linear-gradient(
+  90deg,
+  #131d56 43.45%,
+  #33145d 54.99%,
+  #63166a 65.76%,
+  #a4267b 77.45%,
+  #db327c 88.22%,
+  #eb4b46 100.53%
+);
+
+$linear-gradient-18: linear-gradient(
+  90deg,
+  #162770 20.99%,
+  #382361 36.41%,
+  #8a357d 50.81%,
+  #e64996 66.43%,
+  #eb463d 80.83%,
+  #ed6550 97.28%
+);
+
+$linear-gradient-19: linear-gradient(
+  90deg,
+  #162770 23.16%,
+  #382361 40.92%,
+  #8a357d 57.51%,
+  #e64996 75.5%,
+  #eb463d 92.09%,
+  #ed6550 111.04%
+);
+
+$linear-gradient-20: linear-gradient(
+  90deg,
+  #162770 14.35%,
+  #382361 27.99%,
+  #8a357d 40.74%,
+  #e64996 54.56%,
+  #eb463d 67.31%,
+  #ed6550 81.86%
+);
+
+$linear-gradient-21: linear-gradient(
+  92deg,
+  #181b4e -20.53%,
+  #9b3581 18.39%,
+  #e84680 54.73%,
+  #ec614e 97.97%
+);
+
+// Font mixins
+@mixin font-reg($fs: 1.6rem) {
+  font-size: $fs;
+  font-weight: 400;
+}
+
+@mixin font-med($fs: 1.6rem) {
+  font-size: $fs;
+  font-weight: 500;
+}
+
+@mixin font-semi-bold($fs: 1.6rem) {
+  font-size: $fs;
+  font-weight: 600;
+}
+
+@mixin font-bold($fs: 1.6rem) {
+  font-size: $fs;
+  font-weight: 700;
+}
+
+// Flex mixin
+@mixin d-flex($jc: flex-start) {
+  display: flex;
+  align-items: center;
+  justify-content: $jc;
+}
+
+// font
+@font-face {
+  font-family: EchoesSansMedium;
+  src: url("../../assets/fonts/echoessans_medium.otf");
+}
+
+@font-face {
+  font-family: EchoesSansLight;
+  src: url("../../assets/fonts/echoessans_light.otf");
+}
+
+@font-face {
+  font-family: EchoesSansThin;
+  src: url("../../assets/fonts/echoessans_thin.otf");
+}
+
+@font-face {
+  font-family: EchoesSans;
+  src: url("../../assets/fonts/echoessans.otf");
+}
+
+@font-face {
+  font-family: EchoesSansBlack;
+  src: url("../../assets/fonts/echoessans_black.otf");
+}
+
+@font-face {
+  font-family: EchoesSansBold;
+  src: url("../../assets/fonts/echoessans_bold.otf");
+}

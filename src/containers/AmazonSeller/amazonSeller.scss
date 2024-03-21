@@ -1,0 +1,509 @@
+@import "/src/styles/variables.scss";
+
+.store {
+  background: $linear-gradient-10 !important;
+
+  &Data {
+    @include d-flex();
+    gap: 64px;
+  }
+
+  &Heading {
+    text-align: left;
+  }
+
+  &Gradient {
+    background: $linear-gradient-14;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include font-semi-bold(4.4rem);
+    line-height: 130%;
+    text-transform: capitalize;
+  }
+
+  &Content {
+    flex-basis: 49%;
+  }
+
+  &FrameImg {
+    @include d-flex();
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    &:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    img {
+      margin-top: 6px;
+      width: 14px;
+    }
+
+    p {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      line-height: 160%;
+    }
+  }
+
+  &Image {
+    flex-basis: 46%;
+
+    img {
+      max-width: 550px;
+    }
+  }
+
+  &MobileImage {
+    display: none;
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    &Data {
+      flex-direction: column-reverse;
+      gap: 24px;
+    }
+
+    &Button {
+      @include d-flex();
+      width: 100%;
+      justify-content: center;
+    }
+
+    &Gradient {
+      @include font-semi-bold(2.4rem);
+    }
+
+    &Content {
+      flex-basis: 100%;
+    }
+
+    &FrameImg {
+      p {
+        @include font-reg(1.4rem);
+        line-height: 150%;
+      }
+    }
+
+    &Image {
+      display: none;
+    }
+
+    &MobileImage {
+      display: block;
+      flex-basis: 100%;
+      width: 100%;
+      padding-bottom: 24px;
+
+      img {
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.amazonSeller {
+  h1 {
+    max-width: 870px !important;
+    text-transform: none !important;
+  }
+}
+
+.everythingToKnow {
+  &Main {
+    @include d-flex(center);
+    align-items: flex-start;
+    gap: 64px;
+
+    .description {
+      flex-basis: 67%;
+      width: 100%;
+      color: $color-black-0;
+
+      font-size: 4.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%;
+
+      span {
+        background: linear-gradient(
+          90deg,
+          #162770 3.39%,
+          #382361 20.58%,
+          #8a357d 36.64%,
+          #e64996 54.05%,
+          #eb463d 70.11%,
+          #ed6550 88.45%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  &Accordion {
+    @include d-flex(flex-start);
+    flex-direction: column;
+    gap: 40px;
+    flex-basis: 67%;
+  }
+
+  @media (max-width: 768px) {
+    &Main {
+      flex-direction: column;
+      gap: 40px;
+
+      .description {
+        text-align: center;
+        font-size: 2.4rem;
+      }
+    }
+  }
+}
+
+@keyframes increaseWidth {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+// How it works
+
+.amazonHowWorks {
+  padding: 80px 0;
+  background: $color-gray-5;
+
+  &Container {
+    display: flex;
+    gap: 56px;
+  }
+
+  &Content {
+    max-width: 490px;
+  }
+
+  &Heading {
+    text-align: inherit !important;
+    margin-bottom: inherit !important;
+  }
+
+  &Content {
+    p {
+      font-family: EchoesSansMedium;
+      font-size: 32px;
+      line-height: 130%;
+      padding: 24px 0 40px;
+      color: #4e4e4e;
+    }
+  }
+
+  &Progress {
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.92) 0%,
+        rgba(255, 255, 255, 0.92) 100%
+      ),
+      linear-gradient(
+        106deg,
+        #131d56 -7.8%,
+        #33145d 22.01%,
+        #63166a 50.09%,
+        #a4267b 70.01%,
+        #db327c 86.2%,
+        #eb4b46 102.96%
+      );
+    border-radius: 8px;
+    padding: 24px;
+    position: relative;
+    @include d-flex($jc: flex-start);
+    align-items: inherit;
+    flex-direction: column;
+    gap: 24px;
+
+    &Wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      position: relative;
+      z-index: 2;
+      height: 92px;
+    }
+
+    .activeItem {
+      &:not(:last-of-type) {
+        &::after {
+          content: "";
+          width: 2px;
+          background-color: #9b3581;
+          display: block;
+          position: absolute;
+          top: 26px;
+          left: 20px;
+          animation: progressLine 4s linear;
+          animation-fill-mode: forwards;
+          z-index: 1;
+        }
+      }
+    }
+
+    &Number {
+      z-index: 2;
+    }
+
+    &Contents {
+      opacity: 0.5;
+      cursor: pointer;
+      // padding-bottom: 24px;
+
+      h5 {
+        color: $color-black-0;
+        @include font-semi-bold($fs: 2rem);
+        padding-top: 12px;
+      }
+
+      &ParaGraph {
+        color: $color-black-0;
+        line-height: 160%;
+        @include font-reg($fs: 1.6rem);
+        padding: 14px 0 24px;
+        max-width: 542px;
+      }
+
+      p {
+        color: $color-black-0;
+        line-height: 160%;
+        @include font-reg($fs: 1.6rem);
+        padding: 14px 0 0px;
+        max-width: 542px;
+      }
+
+      &Para {
+        padding-bottom: 0 !important;
+      }
+    }
+  }
+
+  .activeTitle {
+    opacity: 1;
+  }
+
+  @media (max-width: 1100px) {
+    padding: 40px 0;
+
+    &Container {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    &Content {
+      max-width: 100%;
+    }
+
+    &Heading {
+      text-align: center !important;
+    }
+
+    &Content {
+      p {
+        font-size: 20px;
+        padding: 16px 0 16px;
+        text-align: center;
+      }
+    }
+
+    &Progress {
+      &Wrapper {
+        gap: 16px;
+        align-items: unset;
+        height: inherit;
+      }
+
+      &Number {
+        img {
+          min-width: 30px;
+        }
+      }
+
+      .activeItem {
+        &:not(:last-of-type) {
+          &::after {
+            content: "";
+            width: 2px;
+            display: block;
+            position: absolute;
+            top: 26px;
+            left: 19px;
+            animation: progressLine 4s linear;
+            animation-fill-mode: forwards;
+            z-index: 1;
+          }
+        }
+      }
+
+      &Contents {
+        h5 {
+          @include font-semi-bold($fs: 1.6rem);
+          padding-top: 6px;
+        }
+
+        p {
+          @include font-reg($fs: 1.4rem);
+          padding: 8px 0 5px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .activeItem {
+      &:not(:last-of-type) {
+        &::after {
+          content: "";
+          width: 2px;
+          display: block;
+          position: absolute;
+          top: 25px;
+          left: 14px;
+          animation: progressLine 4s linear;
+          animation-fill-mode: forwards;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+// Why Choose
+
+.whyChoose {
+  background: linear-gradient(
+      85deg,
+      rgba(22, 39, 112, 0.05) -9.75%,
+      rgba(56, 35, 97, 0.05) 16.28%,
+      rgba(138, 53, 125, 0.05) 40.6%,
+      rgba(230, 73, 150, 0.05) 66.98%,
+      rgba(235, 70, 61, 0.05) 91.3%,
+      rgba(237, 101, 80, 0.05) 119.07%
+    ),
+    #fff;
+  padding: 80px 0;
+
+  &Heading {
+    padding-bottom: 56px;
+  }
+
+  &Wrapper {
+    &Parent {
+      background-image: url(../../assets/images/amazonSeller/whyChoose.png);
+      background-repeat: no-repeat;
+      background-size: 65%;
+      background-position: center;
+    }
+
+    &First {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &Second {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 116px;
+    }
+  }
+
+  &FirstContent {
+    background: #fff;
+    border-radius: 8px;
+    padding: 18px;
+    max-width: 284px;
+
+    &Img {
+      width: 50px;
+      height: 51px;
+    }
+
+    &:hover {
+      .img_png {
+        display: none;
+      }
+
+      .img_gif {
+        display: block;
+        width: 50px;
+        height: 51px;
+      }
+    }
+
+    &Para {
+      p {
+        color: $color-black-0;
+        font-family: EchoesSansMedium;
+        font-size: 14px;
+        line-height: 130%;
+        padding-top: 16px;
+        max-width: 246px;
+      }
+    }
+  }
+
+  .img_gif {
+    display: none;
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 0;
+
+    &Heading {
+      padding-bottom: 40px;
+    }
+
+    &Wrapper {
+      &Parent {
+        background-image: none !important;
+      }
+
+      &First {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      &Second {
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 24px !important;
+      }
+    }
+
+    &FirstContent {
+      max-width: 100%;
+
+      &Para {
+        p {
+          font-size: 16px;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes progressLine {
+  from {
+    height: 0%;
+  }
+
+  to {
+    height: 100%;
+  }
+}

@@ -1,0 +1,135 @@
+@import "src/styles/variables.scss";
+@import "src/styles/common.scss";
+
+.customer {
+  &Heading {
+    padding-bottom: 40px;
+  }
+
+  &Background {
+    background: $color-gray-5 !important;
+  }
+
+  &Position {
+    padding-bottom: 0 !important;
+  }
+
+  &SpecialText {
+    margin-bottom: 56px !important;
+  }
+
+  &Button {
+    padding: 12px 24px !important;
+  }
+
+  &Gradient {
+    background: linear-gradient(
+      90deg,
+      #131d56 40.23%,
+      #33145d 52.41%,
+      #63166a 63.8%,
+      #a4267b 76.14%,
+      #db327c 87.53%,
+      #eb4b46 100.53%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &Container {
+    display: flex;
+    gap: 48px;
+  }
+
+  &NewData {
+    @include d-flex(space-between);
+    align-items: center;
+  }
+
+  &Image {
+    img {
+      object-fit: cover;
+      border-radius: 9.33px;
+    }
+  }
+
+  .customerContent {
+    @include font-reg($fs: 2.2rem);
+    color: $color-black-0;
+    line-height: 160%;
+    max-width: 802px;
+    padding: 16px 0 24px;
+
+    span {
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 160%;
+    }
+  }
+
+  &Section {
+    span {
+      color: $color-black-0;
+      @include font-med($fs: 2rem);
+      line-height: 150%;
+    }
+
+    p {
+      color: $color-grey-0;
+      @include font-reg($fs: 2rem);
+      line-height: 150%;
+      padding-bottom: 24px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &Heading {
+      padding-bottom: 24px;
+
+      span {
+        font-size: 2.4rem;
+      }
+    }
+
+    &SpecialText {
+      margin-bottom: 40px !important;
+    }
+
+    &Image {
+      img {
+        width: 100%;
+      }
+    }
+
+    &Container {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &Section {
+      span {
+        @include font-med($fs: 1.4rem);
+      }
+
+      p {
+        @include font-reg($fs: 1.4rem);
+      }
+    }
+
+    .customerContent {
+      @include font-reg($fs: 1.4rem);
+      max-width: 100%;
+
+      span {
+        font-size: 1.4rem;
+        line-height: 150%;
+      }
+    }
+
+    &Button {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

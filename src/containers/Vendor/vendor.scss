@@ -1,0 +1,656 @@
+@import "/src/styles/vendor/variable.scss";
+@import "/src/styles/vendor/global.scss";
+// Banner
+
+.vendorBanner {
+  padding: 50px 0 100px;
+
+  &Wrapper {
+    display: flex;
+    gap: 80px;
+  }
+
+  &Heading {
+    max-width: 626px;
+    margin-bottom: inherit !important;
+  }
+
+  &Contents {
+    p {
+      @include font-reg($fs: 1.8rem);
+      line-height: 150%;
+      color: $color-grey-0;
+      max-width: 626px;
+      margin: 16px 0 40px;
+    }
+  }
+
+  &Image {
+    width: 503px;
+  }
+
+  &Buttons {
+    display: flex;
+    gap: 24px;
+
+    &Apply {
+      transition: 0.5s all ease-in-out;
+      padding: 16px 32px !important;
+    }
+
+    &Eligi {
+      transition: 0.5s all ease-in-out;
+      background: var(
+        --Primary-Brand-Gradient,
+        linear-gradient(
+          90deg,
+          #131d56 -1.66%,
+          #33145d 26.58%,
+          #63166a 53.17%,
+          #a4267b 72.03%,
+          #db327c 87.36%,
+          #eb4b46 103.24%
+        )
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      border: 1px solid $color-darkBlue-3;
+      font-size: 16px;
+      padding: 16px 32px;
+      cursor: pointer;
+      color: white !important;
+      height: 48px;
+
+      &:hover {
+        background: #19147b;
+        -webkit-text-fill-color: inherit;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 107px 0 40px;
+
+    &Wrapper {
+      flex-direction: column;
+      gap: 70px;
+    }
+
+    &Heading {
+      max-width: 100%;
+      @include font-semi-bold($fs: 2.8rem);
+      text-align: center;
+    }
+
+    &Contents {
+      p {
+        @include font-reg($fs: 1.4rem);
+        max-width: 100%;
+        margin: 16px 0 20px;
+        text-align: center;
+      }
+    }
+
+    &Image {
+      width: 100%;
+    }
+
+    &Buttons {
+      gap: 20px;
+      justify-content: center;
+
+      &Apply {
+        width: 146px;
+      }
+
+      &Eligi {
+        height: 40px;
+        font-size: 14px;
+        width: 146px;
+      }
+    }
+  }
+}
+
+// connectWithUs
+.connectWithUs {
+  border-radius: 8px;
+  padding: 64px;
+  background: url("../../assets/images/vendor/bgImage.svg"), $linear-gradient-1;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+
+  &Background {
+    padding: 60px 0 !important;
+  }
+
+  &Data {
+    @include d-flex(space-between);
+  }
+
+  &Para {
+    color: $color-white-0;
+    @include font-semi-bold(4.4rem);
+    line-height: 130%;
+    max-width: 655px;
+  }
+
+  &Button {
+    border-radius: 4px;
+    border: 1px solid $color-white-0;
+    @include d-flex();
+    gap: 10px;
+    padding: 16px 32px;
+    cursor: pointer;
+    height: 48px;
+    transition: all 0.8s ease;
+
+    &:hover {
+      border: 1px solid $color-white-0;
+      background: $color-white-0;
+
+      a {
+        background: $linear-gradient-1;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      svg {
+        transform: translate(6px, 0px);
+
+        path {
+          stroke: url(#paint0_linear_1601_451);
+        }
+      }
+    }
+
+    svg {
+      transform: translate(0px, 0px);
+      transition: all 0.8s ease;
+
+      path {
+        stroke: white;
+      }
+    }
+
+    a {
+      color: $color-white-0;
+      @include font-med(1.6rem);
+    }
+  }
+
+  //   responsive
+  @media (max-width: 1100px) {
+    background: url("../../assets/images/vendor/connectWithUs.svg"),
+      $linear-gradient-1;
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+  }
+
+  @media (max-width: 1190px) {
+    &Data {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    &Btn {
+      width: 100%;
+    }
+
+    &Button {
+      @include d-flex(center);
+      width: 100%;
+      padding: 12px 32px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 24px;
+    border-radius: 8px;
+    margin: 0;
+
+    &Data {
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    &Para {
+      @include font-semi-bold(2.4rem);
+      text-align: center;
+      max-width: 100%;
+    }
+
+    &Button {
+      @include d-flex(center);
+      width: 100%;
+      padding: 12px 32px;
+
+      a {
+        @include font-med(1.4rem);
+      }
+    }
+  }
+}
+
+// Scroll Section
+
+.vendorScroll {
+  background: $color-white-0 !important;
+  padding: 80px 0 44px !important;
+
+  &Section {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    position: relative;
+  }
+
+  &Heading {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+
+    h2 {
+      @include font-semi-bold($fs: 4.4rem);
+      line-height: 130%;
+      color: $color-black-0;
+      max-width: 568px;
+      text-transform: capitalize;
+    }
+
+    span {
+      background: $linear-gradient-7;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      padding-top: 24px;
+      color: $color-grey-0;
+      line-height: 130%;
+      @include font-med($fs: 3.2rem);
+      font-family: EchoesSans;
+      max-width: 568px;
+    }
+  }
+
+  &Contents {
+    flex-basis: 47.4%;
+  }
+
+  &Content {
+    padding: 56px 0 0;
+
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $linear-gradient-8;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &Contents {
+    p {
+      @include font-reg($fs: 1.6rem);
+      color: $color-grey-0;
+      line-height: 160%;
+      max-width: 520px;
+      padding: 24px 0 56px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 0 8px !important;
+
+    &Section {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    &Contents {
+      flex-basis: 100%;
+    }
+
+    &Heading {
+      position: inherit;
+      top: 0;
+
+      h2 {
+        @include font-semi-bold($fs: 2.4rem);
+        color: $color-black-0;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      p {
+        @include font-med($fs: 2rem);
+        padding: 16px 0 0;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+
+    &Contents {
+      p {
+        @include font-reg($fs: 1.4rem);
+        line-height: 150%;
+        max-width: 100%;
+        padding: 24px 0 32px;
+      }
+    }
+
+    &Content {
+      padding-top: 32px;
+    }
+  }
+}
+
+// VendorAccordion
+
+.vendorAccordion {
+  background: $color-gray-5 !important;
+  padding: 80px 0 !important;
+
+  &AdditionalClass {
+    list-style-type: disc !important;
+
+    li {
+      list-style-type: disc !important;
+      @include font-reg(1.6rem);
+      color: $color-grey-0;
+      padding-top: 10px;
+      margin-left: 17px;
+    }
+  }
+
+  &InvestorData {
+    @include font-reg($fs: 1.6rem);
+    line-height: 160%;
+    color: $color-grey-0;
+  }
+
+  &Container {
+    max-width: 948px !important;
+  }
+
+  &Heading {
+    margin-bottom: 56px !important;
+    max-width: 647px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &Text {
+    background: $linear-gradient-11 !important;
+    background-clip: text;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  // accordion
+  h3 {
+    color: $color-black-0;
+    @include font-med(2rem);
+    font-family: EchoesSansMedium;
+  }
+
+  &Title {
+    @include d-flex(space-between);
+    transition: padding 0.2s ease-in-out;
+    padding: 24px 0;
+    cursor: pointer;
+
+    &:last-child {
+      padding: 24px 0 0;
+    }
+  }
+
+  .active {
+    padding: 40px 0 16px;
+  }
+
+  &Contents {
+    p {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      margin: 24px 0 16px;
+      line-height: 160%;
+      max-width: 828px;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    border-bottom: 1px solid $color-gray-3;
+    padding: 0 0 24px;
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    padding: 40px 0 36px !important;
+
+    &Heading {
+      margin-bottom: 40px !important;
+      max-width: 100%;
+    }
+
+    // accordion
+    h3 {
+      @include font-med(1.8rem);
+    }
+
+    &Title {
+      padding: 24px 0;
+      gap: 40px;
+    }
+
+    .active {
+      padding: 24px 0 16px;
+    }
+
+    &Contents {
+      p {
+        max-width: 100%;
+        @include font-reg(1.4rem);
+        line-height: 150%;
+      }
+
+      padding: 0 0 24px;
+    }
+
+    .vendorAccordionListStyles {
+      li {
+        font-size: 1.4rem;
+        line-height: 150%;
+        max-width: 100%;
+        padding-top: 5px;
+      }
+    }
+
+    .vendorAccordionReduceFontSize {
+      font-size: 1.8rem !important;
+    }
+  }
+}
+
+.vendorAccordionListStyles {
+  list-style-type: disc !important;
+
+  li {
+    color: $color-grey-0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 30px;
+    line-height: 160%;
+    max-width: 828px;
+    padding-top: 5px;
+  }
+}
+
+.vendorAccordionContent {
+  color: $color-grey-0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 828px;
+  padding-top: 20px;
+  display: block;
+}
+
+.vendorAccordionReduceFontSize {
+  font-size: 4rem !important;
+  padding-bottom: 16px !important;
+}
+
+// Vendor Card
+
+.vendorCard {
+  background: $linear-gradient-10 !important;
+
+  &CommonHeading {
+    max-width: 906px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &Gradient {
+    background: $linear-gradient-16 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  &Wrapper {
+    @include d-flex(center);
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding-top: 64px;
+  }
+
+  &Card {
+    display: flex;
+    flex-basis: 48%;
+
+    span {
+      &:first-of-type {
+        height: 100% !important;
+      }
+    }
+  }
+
+  &Title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+
+    h3 {
+      @include font-med($fs: 2rem);
+      line-height: 130%;
+      color: $color-black-0;
+      max-width: 209px;
+      font-family: EchoesSansMedium;
+    }
+  }
+
+  &Para {
+    p {
+      color: $color-grey-0;
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+    }
+  }
+
+  &FirstCard {
+    border-radius: 8px;
+    background: var(--White, $color-white-0);
+    box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.06);
+    padding: 32px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    height: 100%;
+
+    .img_gif {
+      display: none;
+    }
+
+    .img_png {
+      width: 60px;
+      display: block;
+    }
+
+    &:hover {
+      transition: all 0.5s ease;
+      box-shadow: 2px 24px 96px 0px rgba(0, 0, 0, 0.09);
+
+      .img_png {
+        display: none;
+      }
+
+      .img_gif {
+        display: block;
+        width: 60px;
+      }
+    }
+  }
+
+  .linear {
+    padding: 1px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+
+    &:hover {
+      background: $linear-gradient-3;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &Wrapper {
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 24px;
+    }
+
+    &FirstCard {
+      padding: 24px;
+      min-height: 0;
+    }
+
+    &Card {
+      width: 100%;
+      display: block;
+    }
+
+    &Title {
+      margin-bottom: 14px !important;
+
+      h3 {
+        @include font-med($fs: 1.8rem);
+        max-width: 199px;
+      }
+    }
+
+    &Para {
+      p {
+        max-width: 100%;
+        @include font-reg($fs: 1.4rem);
+        line-height: 150%;
+        padding-top: 0;
+      }
+    }
+  }
+}

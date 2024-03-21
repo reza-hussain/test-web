@@ -1,0 +1,136 @@
+@import "src/styles/variables.scss";
+
+.blog {
+  margin-top: 80px;
+  padding: 60px 16px 0;
+  position: relative;
+  &PageAuthorDetails {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    h4,
+    p {
+      color: $color-grey-0;
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 2rem;
+    }
+    p {
+      font-weight: 400;
+      font-size: 2rem;
+    }
+  }
+  &BackBtn {
+    @include d-flex($jc: flex-start);
+    gap: 8px;
+    width: 100%;
+    font-size: 1.6rem;
+    cursor: pointer;
+    margin-bottom: 40px;
+    background-image: linear-gradient(
+      92deg,
+      #181b4e -34.44%,
+      #9b3581 25.39%,
+      #e84680 70%,
+      #ec614e 130.02%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &Share {
+    @include d-flex($jc: normal);
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 16px;
+    gap: 16px;
+
+    img {
+      margin: 0;
+      height: auto;
+      cursor: pointer;
+      width: 31px;
+    }
+
+    p {
+      margin-bottom: 0px;
+    }
+
+    &Icons {
+      width: 100%;
+      @include d-flex($jc: normal);
+      gap: 24px;
+    }
+  }
+  &ScrollTop {
+    position: absolute;
+    right: -100px;
+    bottom: 0;
+    height: 100%;
+    @include d-flex($jc: center);
+    align-items: flex-start;
+    max-width: 44px;
+
+    img {
+      position: sticky;
+      width: 44px;
+      top: 90vh;
+      cursor: pointer;
+    }
+  }
+}
+
+.suggestBlogs {
+  background: $linear-gradient-15;
+
+  .commonHeading {
+    padding-bottom: 64px;
+  }
+  .blogsCardContainer {
+    padding-bottom: 64px;
+  }
+  .clickMore {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
+    @include d-flex($jc: center);
+    gap: 8px;
+    cursor: pointer;
+    background-image: linear-gradient(
+      92deg,
+      #181b4e -34.44%,
+      #9b3581 25.39%,
+      #e84680 70%,
+      #ec614e 130.02%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    img {
+      rotate: 180deg;
+    }
+  }
+}
+
+// media query
+@media (max-width: 768px) {
+  .blog {
+    margin-top: 67px;
+    position: relative;
+
+    &ScrollTop {
+      display: none;
+    }
+    .suggestBlogs {
+      .commonHeading {
+        padding-bottom: 64px;
+      }
+    }
+  }
+}

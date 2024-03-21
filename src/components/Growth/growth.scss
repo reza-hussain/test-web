@@ -1,0 +1,133 @@
+@import "/src/styles/variables.scss";
+
+.growth {
+  padding: 64px;
+  background: url("../../assets/images/payLater/bgImage.svg"),
+    $linear-gradient-1;
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  border-radius: 8px;
+  @include d-flex(space-between);
+  align-items: center;
+
+  &Background {
+    padding: 60px 0 !important;
+  }
+
+  &Statistics {
+    max-width: 736px;
+
+    &Text {
+      max-width: 691px;
+    }
+
+    h2 {
+      color: $color-white-0;
+      text-transform: capitalize;
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    &ParaGraph {
+      color: $color-white-0;
+      @include font-reg(1.8rem);
+      line-height: 150%;
+    }
+  }
+
+  &Button {
+    border-radius: 4px;
+    border: 1px solid $color-white-0;
+    @include d-flex();
+    gap: 10px;
+    padding: 16px 32px;
+    cursor: pointer;
+    height: 48px;
+    transition: all 0.8s ease;
+
+    &:hover {
+      border: 1px solid $color-white-0;
+      background: $color-white-0;
+
+      label {
+        background: $linear-gradient-1;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      svg {
+        transform: translate(6px);
+
+        path {
+          stroke: url(#paint0_linear_1601_451);
+        }
+      }
+    }
+
+    svg {
+      transition: all 0.8s ease;
+
+      path {
+        stroke: white;
+      }
+    }
+
+    label {
+      cursor: pointer;
+      color: $color-white-0;
+      @include font-med(1.6rem);
+    }
+  }
+
+  // responsive
+  @media (max-width: 1160px) {
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 44px;
+
+    &Btn {
+      width: 100%;
+    }
+
+    &Button {
+      @include d-flex(center);
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 32px;
+    padding: 24px;
+    flex-direction: column;
+    background: url("../../assets/images/payLater/bgMobileImg.svg"),
+      $linear-gradient-1;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+
+    &Statistics {
+      text-align: center;
+
+      &Text {
+        max-width: 100%;
+      }
+
+      h2 {
+        margin-bottom: 16px;
+        text-align: center;
+      }
+
+      &ParaGraph {
+        @include font-reg(1.4rem);
+      }
+    }
+
+    &Button {
+      @include d-flex(center);
+      padding: 12px 32px;
+
+      a {
+        @include font-med(1.4rem);
+      }
+    }
+  }
+}

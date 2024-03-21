@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import "/src/styles/vendor/variable.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html,
+body {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.commonBannerHeading {
+  color: $color-black-0;
+  @include font-semi-bold($fs: 5rem);
+  line-height: 130%;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+}
+
+.commonHeading {
+  @include font-semi-bold(4.4rem);
+  line-height: 130%;
+  margin-bottom: 24px;
+  color: $color-black-0;
+  text-transform: capitalize;
+}
+
+.commonGradientHeading {
+  background: $linear-gradient-5;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @include font-semi-bold(4.4rem);
+  text-transform: capitalize;
+}
+
+.commonBackground {
+  padding: 80px 0;
+  background: $color-white-0;
+}
+
+.container {
+  max-width: 1248px;
+  margin: 0px auto;
+  padding: 0px 24px;
+}
+
+.commonBannerGradient {
+  background: linear-gradient(
+    90deg,
+    #162770 5.29%,
+    #382361 22.64%,
+    #8a357d 38.85%,
+    #e64996 56.42%,
+    #eb463d 72.63%,
+    #ed6550 91.14%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 130%;
+  @include font-semi-bold(5rem);
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.commonGradient {
+  @include font-semi-bold(4.4rem);
+  line-height: 130%;
+  letter-spacing: 1px;
+  background: $linear-gradient-4;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+}
+
+.commonButton {
+  color: #ffffff;
+  @include font-med(1.6rem);
+  font-family: Montserrat;
+  background: $linear-gradient-1;
+  border-radius: 4px;
+  outline: 0;
+  padding: 16px 32px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  cursor: pointer;
+
+  &:hover {
+    background: $color-darkBlue-1;
+
+    svg {
+      transform: translate(6px);
+      transition: all 0.5s ease;
+    }
+  }
+
+  svg {
+    transition: all 0.5s ease;
+  }
+}
+
+@media (max-width: 992px) {
+  .commonBackground {
+    padding: 40px 0px;
+  }
+
+  .commonBannerHeading {
+    color: $color-black-0;
+    @include font-semi-bold(2.8rem);
+  }
+
+  .commonBannerGradient {
+    @include font-semi-bold(2.8rem);
+    letter-spacing: 0;
+  }
+
+  .commonHeading {
+    max-width: 100% !important;
+    @include font-semi-bold(2.4rem);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .commonBannerHeading {
+    margin-bottom: 16px;
+    letter-spacing: 0;
+  }
+
+  .commonGradientHeading {
+    @include font-semi-bold(2.4rem);
+    text-align: center;
+  }
+
+  .commonButton {
+    margin: 0 auto;
+    padding: 12px 24px;
+    @include font-med(1.4rem);
+  }
+
+  .commonGradient {
+    @include font-semi-bold(2.4rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .commonButton {
+    height: 40px;
+  }
+}

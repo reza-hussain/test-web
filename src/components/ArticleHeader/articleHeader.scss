@@ -1,0 +1,57 @@
+@import "/src/styles/variables.scss";
+
+.articleHeader {
+  margin-top: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(22, 39, 112, 0.05) -3.98%,
+    rgba(56, 35, 97, 0.05) 19.05%,
+    rgba(138, 53, 125, 0.05) 40.57%,
+    rgba(230, 73, 150, 0.05) 63.91%,
+    rgba(235, 70, 61, 0.05) 85.43%,
+    rgba(237, 101, 80, 0.05) 110%
+  ) !important;
+
+  h2 {
+    background: linear-gradient(
+      90deg,
+      #162770 -3.98%,
+      #382361 19.05%,
+      #8a357d 40.57%,
+      #e64996 63.91%,
+      #eb463d 85.43%,
+      #ed6550 110%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    @include font-semi-bold(5rem);
+    line-height: 130%;
+    letter-spacing: 1px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    color: var(--Gray-Shade-1, #4e4e4e);
+    text-align: center;
+    @include font-reg(1.8rem);
+    line-height: 150%;
+    max-width: 812px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 992px) {
+    margin-top: 66px;
+
+    h2 {
+      @include font-semi-bold(2.8rem);
+      margin-bottom: 16px;
+    }
+
+    p {
+      @include font-reg(1.4rem);
+      max-width: 100%;
+    }
+  }
+}

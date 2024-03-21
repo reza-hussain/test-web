@@ -1,0 +1,439 @@
+@import "src/styles/variables.scss";
+
+.caseStudy {
+  // Banner
+  .Banner {
+    margin-top: 80px;
+
+    &Container {
+      background: url(../../assets/images/caseStudy/bannerImg.svg),
+        $color-white-0 !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      padding: 152px 24px !important;
+    }
+
+    &Heading {
+      text-transform: none !important;
+      max-width: 930px;
+      margin: 0 auto 0 !important;
+      text-align: center;
+    }
+
+    &Gradient {
+      background: $linear-gradient-19 !important;
+      background-clip: text;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      text-transform: none !important;
+    }
+  }
+
+  // caseStudyChallenge
+  .challenge {
+    background: #f9f9f9 !important;
+
+    &Header {
+      margin-bottom: 56px;
+      text-align: center;
+
+      &Text {
+        // // background: $linear-gradient- !important;
+        // -webkit-background-clip: text !important;
+        // -webkit-text-fill-color: transparent !important;
+        background: var(
+          --G-3,
+          linear-gradient(
+            90deg,
+            #131d56 -1.65%,
+            #33145d 19%,
+            #63166a 38.29%,
+            #a4267b 59.21%,
+            #db327c 78.5%,
+            #eb4b46 100.54%
+          )
+        ) !important;
+        background-clip: text;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        letter-spacing: 0 !important;
+      }
+    }
+
+    &Para {
+      color: $color-grey-0;
+      @include font-reg(1.8rem);
+      line-height: 150%;
+      max-width: 720px;
+      margin: 16px auto;
+    }
+
+    &Wrapper {
+      @include d-flex(center);
+      align-items: stretch;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    &Card {
+      display: flex;
+      flex-basis: 22.5%;
+
+      span {
+        &:first-of-type {
+          height: 100% !important;
+        }
+      }
+    }
+
+    &Para {
+      margin-bottom: 24px !important;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    &Title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      min-height: 78px;
+
+      h3 {
+        @include font-med($fs: 2rem);
+        line-height: 130%;
+        color: $color-black-0;
+        max-width: 106px;
+        font-family: EchoesSansMedium;
+      }
+    }
+
+    &Para {
+      p {
+        color: $color-grey-0;
+        @include font-reg($fs: 1.6rem);
+        line-height: 160%;
+        max-width: 206px;
+        min-height: 78px;
+      }
+    }
+
+    &FirstCard {
+      border-radius: 8px;
+      background: var(--White, $color-white-0);
+      padding: 32px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      height: 100%;
+
+      .img_gif {
+        display: none;
+      }
+
+      .img_png {
+        width: 60px;
+        display: block;
+      }
+
+      &:hover {
+        transition: all 0.5s ease;
+        box-shadow: 2px 24px 96px 0px rgba(0, 0, 0, 0.09);
+
+        .img_png {
+          display: none;
+        }
+
+        .img_gif {
+          display: block;
+          width: 60px;
+        }
+      }
+    }
+
+    .linear {
+      padding: 1px;
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+
+      &:hover {
+        background: $linear-gradient-3;
+      }
+    }
+  }
+
+  // aboutCaseStudy
+  .shopFront {
+    background: $linear-gradient-2 !important;
+
+    &Img {
+      display: none;
+    }
+
+    &Contents {
+      @include d-flex(space-between);
+      gap: 120px;
+    }
+
+    &Gradient {
+      &Head {
+        text-align: inherit !important;
+        margin-bottom: 32px !important;
+      }
+
+      &Text {
+        background: $linear-gradient-20 !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+      }
+    }
+
+    &ParaGraph {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      line-height: 160%;
+      margin-bottom: 16px;
+      max-width: 630px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      &Weight {
+        @include font-med(1.6rem);
+      }
+
+      &Color {
+        color: $color-darkBlue-1;
+        @include font-med(1.6rem);
+        line-height: 160%;
+        border-bottom: 1px solid $color-darkBlue-1;
+      }
+    }
+
+    &Image {
+      max-width: 450px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    // Banner
+    .Banner {
+      margin-top: 66px;
+
+      &Container {
+        background: url(../../assets/images/caseStudy/bannerMobileImg.svg),
+          $color-white-0 !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        padding: 20px 24px !important;
+      }
+
+      &Heading {
+        max-width: 100%;
+        letter-spacing: 0;
+      }
+    }
+
+    // caseStudyChallenge
+    .challenge {
+      &Header {
+        margin-bottom: 40px;
+      }
+
+      &Para {
+        @include font-reg(1.4rem);
+        max-width: 100%;
+      }
+
+      &Wrapper {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      &FirstCard {
+        padding: 24px;
+        min-height: 0;
+      }
+
+      &Card {
+        width: 100%;
+        display: block;
+      }
+
+      &Title {
+        min-height: 0;
+
+        h3 {
+          @include font-med($fs: 1.8rem);
+          max-width: 174px;
+        }
+      }
+
+      &Para {
+        margin-bottom: 0 !important;
+
+        p {
+          max-width: 100%;
+          @include font-reg($fs: 1.4rem);
+          line-height: 150%;
+          padding-top: 0;
+          min-height: 0;
+        }
+      }
+    }
+
+    // aboutCaseStudy
+    .shopFront {
+      &Contents {
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      &Img {
+        display: block;
+        max-width: 100%;
+        margin: 0 0 24px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &Gradient {
+        &Head {
+          text-align: center !important;
+          margin-bottom: 24px !important;
+        }
+      }
+
+      &ParaGraph {
+        @include font-reg(1.4rem);
+        max-width: 100%;
+        line-height: 150%;
+
+        &Weight {
+          @include font-med(1.4rem);
+        }
+
+        &Color {
+          @include font-med(1.4rem);
+        }
+      }
+
+      &Image {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 370px) {
+    .challenge {
+      &Para {
+        p {
+          max-width: 230px;
+        }
+      }
+    }
+  }
+}
+
+.caseStudyCard {
+  padding: 100px 0 0;
+
+  &Container {
+    padding: 40px;
+    border-radius: 8px;
+    background-image: url(../../assets//images/caseStudy/caseStudyCardImage.png),
+      var(
+        --G-4,
+        linear-gradient(
+          90deg,
+          #131d56 -1.66%,
+          #33145d 26.58%,
+          #63166a 53.17%,
+          #a4267b 72.03%,
+          #db327c 87.36%,
+          #eb4b46 103.24%
+        )
+      );
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    text-align: center;
+
+    p {
+      @include font-semi-bold($fs: 2.4rem);
+      line-height: 160%;
+      color: $color-white-0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 0;
+
+    &Container {
+      padding: 24px;
+
+      p {
+        @include font-semi-bold($fs: 1.4rem);
+        line-height: 150%;
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.vision {
+  &Section {
+    display: flex;
+    gap: 120px;
+  }
+
+  &Heading {
+    text-align: left;
+  }
+
+  &Content {
+    align-self: center;
+    max-width: 604px;
+
+    p {
+      color: $color-grey-0;
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+    }
+
+    &FirstText {
+      padding: 16px 0;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &Section {
+      flex-direction: column-reverse;
+      gap: 64px;
+    }
+
+    &Content {
+      align-self: inherit;
+      max-width: 100%;
+
+      p {
+        @include font-reg($fs: 1.4rem);
+        line-height: 150%;
+      }
+
+      &FirstText {
+        padding: 0 0 16px;
+      }
+    }
+  }
+}

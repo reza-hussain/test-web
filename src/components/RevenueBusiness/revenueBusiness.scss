@@ -1,0 +1,122 @@
+@import "/src/styles/variables.scss";
+
+.finance {
+  background: $linear-gradient-10 !important;
+
+  &HeaderText {
+    max-width: 730px !important;
+    margin: 0 auto;
+  }
+
+  &SpecialText {
+    background: $linear-gradient-13 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    @include font-semi-bold(4.4rem !important);
+    display: block;
+  }
+
+  // cards
+  &Cards {
+    @include d-flex(space-between);
+    gap: 56px;
+    padding-bottom: 80px;
+
+    &:first-of-type {
+      padding-top: 32px;
+    }
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+
+    &:nth-child(3) {
+      flex-direction: row-reverse;
+    }
+
+    &Image {
+      flex-basis: 47.7%;
+
+      img {
+        max-width: 572px;
+      }
+    }
+
+    &Data {
+      flex-basis: 47.7%;
+
+      h4 {
+        color: $color-black-0;
+        font-family: EchoesSansMedium;
+        @include font-med(3.2rem);
+        line-height: 130%;
+        margin-bottom: 12px;
+        max-width: 476px;
+      }
+    }
+
+    &FrameIcon {
+      @include d-flex();
+      gap: 12px;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      p {
+        color: $color-grey-0;
+        @include font-reg(1.6rem);
+        line-height: 160%;
+        max-width: 502px;
+      }
+    }
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    &SpecialText {
+      @include font-semi-bold(2.4rem !important);
+    }
+
+    // cards
+    &Cards {
+      flex-direction: column-reverse;
+      gap: 24px;
+      padding-bottom: 32px;
+
+      &:first-of-type {
+        padding-top: 24px;
+      }
+
+      &:nth-child(3) {
+        flex-direction: column-reverse;
+      }
+
+      &Image {
+        width: 100%;
+
+        img {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+
+      &Data {
+        width: 100%;
+
+        h4 {
+          @include font-med(1.8rem);
+          max-width: 100%;
+        }
+      }
+
+      &FrameIcon {
+        p {
+          @include font-reg(1.4rem);
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

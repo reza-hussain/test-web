@@ -1,0 +1,200 @@
+@import "src/styles/variables.scss";
+
+.industry {
+  background: #f7f7f7 !important;
+  padding: 80px 0 !important;
+
+  &Border {
+    padding: 1px;
+    border-radius: 10px;
+
+    &:nth-child(1) {
+      flex-basis: 49%;
+    }
+
+    &:nth-child(2) {
+      flex-basis: 49%;
+    }
+
+    &:nth-child(3) {
+      flex-basis: 49%;
+    }
+
+    &:nth-child(4) {
+      flex-basis: 49%;
+    }
+    &:hover {
+      background: $linear-gradient-3;
+    }
+  }
+
+  &Heading {
+    margin-bottom: 8px;
+
+    .navigatorImg {
+      display: none;
+    }
+  }
+
+  .commonHeading {
+    margin: 0 auto 64px;
+    @include d-flex(center);
+    flex-direction: column;
+
+    h1 {
+      background: linear-gradient(
+        90deg,
+        #162770 5.29%,
+        #382361 22.64%,
+        #8a357d 38.85%,
+        #e64996 56.42%,
+        #eb463d 72.63%,
+        #ed6550 91.14%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font-semi-bold(4.4rem);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      max-width: 653px;
+    }
+
+    p {
+      color: var(--Gray-Shade-1, #4e4e4e);
+      @include font-reg(1.6rem);
+      line-height: 150%; /* 27px */
+      text-transform: none;
+      max-width: 694px;
+    }
+  }
+
+  &Platform {
+    border-radius: 10px;
+    border: 1px solid rgba(25, 20, 123, 0.08);
+    background: #f4f6fe;
+    padding: 24px;
+    @include d-flex(space-between);
+    max-height: 230px;
+    align-items: stretch;
+    flex-basis: 49%;
+    cursor: pointer;
+  }
+
+  .secondCard {
+    background: #ffeff7 !important;
+
+    h3 {
+      color: #e54696;
+    }
+  }
+
+  .thirdCard {
+    background: #fff5f5 !important;
+
+    h3 {
+      color: #e96a6a;
+    }
+  }
+
+  .fourthCard {
+    background: #fff5fa !important;
+
+    h3 {
+      color: #9b3581;
+    }
+  }
+
+  &Header {
+    h3 {
+      color: var(--Primary-Primary, #19147b);
+      @include font-semi-bold(2.2rem);
+      line-height: 130%;
+      text-transform: capitalize;
+    }
+
+    p {
+      color: #65638f;
+      @include font-med(1.4rem);
+      line-height: 26px; /* 162.5% */
+      text-transform: capitalize;
+      max-width: 324px;
+    }
+  }
+
+  &Cards {
+    @include d-flex(space-between);
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  @media (max-width: 992px) {
+    &Heading {
+      @include d-flex(space-between);
+
+      .navigatorImg {
+        display: block;
+      }
+    }
+
+    .commonHeading {
+      margin: 0 auto 40px;
+
+      h1 {
+        @include font-semi-bold(2.4rem);
+        letter-spacing: 0.48px;
+        max-width: 100%;
+      }
+
+      p {
+        @include font-reg(1.4rem);
+        max-width: 100%;
+      }
+    }
+
+    &Navigator {
+      display: none;
+    }
+
+    &Platform {
+      flex-direction: column;
+      width: 100%;
+      gap: 24px;
+      max-height: none;
+    }
+
+    &Logo {
+      @include d-flex(center);
+    }
+
+    &Border {
+      &:nth-child(1) {
+        flex-basis: 100%;
+      }
+
+      &:nth-child(2) {
+        flex-basis: 100%;
+      }
+
+      &:nth-child(3) {
+        flex-basis: 100%;
+      }
+
+      &:nth-child(4) {
+        flex-basis: 100%;
+      }
+    }
+
+    &Header {
+      h3 {
+        @include font-semi-bold(1.8rem);
+      }
+
+      p {
+        line-height: 22px;
+        max-width: 100%;
+      }
+    }
+  }
+}

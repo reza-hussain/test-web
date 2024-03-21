@@ -1,0 +1,103 @@
+@import "src/styles/variables.scss";
+
+.dataProtection {
+  padding: 56px 0;
+
+  &Heading {
+    h1 {
+      color: $color-grey-0;
+      font-family: EchoesSansMedium;
+      @include font-med($fs: 4rem);
+      padding-bottom: 24px;
+    }
+
+    p {
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+      padding-bottom: 24px;
+    }
+  }
+
+  &Label {
+    h3 {
+      color: $color-grey-0;
+      @include font-semi-bold($fs: 1.8rem);
+      line-height: 150%;
+      padding: 8px 0 16px;
+    }
+
+    p {
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+      padding: 16px 0 0;
+    }
+
+    ol li {
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+      padding: 0 0 16px 16px;
+      margin-left: 30px;
+    }
+
+    label {
+      padding: 10px 0 0;
+    }
+
+    a {
+      color: $color-Pink-0;
+      text-decoration: underline !important;
+      padding-top: 10px;
+    }
+  }
+
+  &Link {
+    padding-top: 16px;
+
+    label {
+      span {
+        padding-left: 50px;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 0;
+
+    &Heading {
+      h1 {
+        padding-bottom: 24px;
+        @include font-med($fs: 2rem);
+      }
+
+      p {
+        @include font-reg($fs: 1.4rem);
+        padding-bottom: 16px;
+      }
+    }
+
+    &Label {
+      h3 {
+        @include font-semi-bold($fs: 1.4rem);
+        padding: 8px 0 16px;
+      }
+
+      p {
+        @include font-reg($fs: 1.4rem);
+        padding-bottom: 16px 0 0;
+      }
+
+      ol li {
+        @include font-reg($fs: 1.4rem);
+        padding: 0 0px 16px;
+      }
+    }
+
+    &Link {
+      label {
+        span {
+          padding-left: 25px;
+        }
+      }
+    }
+  }
+}

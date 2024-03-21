@@ -1,0 +1,167 @@
+@import "/src/styles/variables.scss";
+
+.bannerData {
+  margin-top: 80px;
+  background: $color-white-0;
+  border-bottom: 1px solid #e8e8e4;
+  padding: 100px 0 !important;
+
+  &SpecialText {
+    background: $linear-gradient-6 !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  .amazonSellerClickingText {
+    color: $color-grey-0;
+    @include font-reg($fs: 1.2rem);
+    line-height: 150%;
+    padding-top: 10px;
+  }
+
+  &NewImg {
+    max-width: 453px !important;
+  }
+
+  &Heading {
+    max-width: 1114px !important;
+  }
+
+  &Class {
+    display: block;
+  }
+
+  &Header {
+    max-width: 890px;
+    margin-bottom: 24px;
+  }
+
+  &About {
+    max-width: 900px !important;
+  }
+
+  &Extra {
+    max-width: 869px !important;
+    color: $color-black-0 !important;
+  }
+
+  &Gradient {
+    background: $linear-gradient-3 !important;
+    background-clip: text;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &Grouping {
+    @include d-flex(space-between);
+  }
+
+  &Content {
+    @include d-flex();
+    align-items: baseline;
+    flex-direction: column;
+    flex-basis: 52.2%;
+  }
+
+  &Heading {
+    margin-bottom: 24px;
+  }
+
+  &ParaGraph {
+    color: $color-grey-0 !important;
+    @include font-reg(1.8rem);
+    line-height: 150%;
+    max-width: 812px;
+    margin-bottom: 40px;
+  }
+
+  &Image {
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+    align-items: center;
+    max-width: 30%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &PayLaterDirect {
+    max-width: 40%;
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    padding: 40px 0 !important;
+
+    &Grouping {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    &Content {
+      align-items: center;
+      text-align: center;
+    }
+
+    &NewImg {
+      max-width: 100% !important;
+    }
+
+    &Heading {
+      max-width: 100%;
+    }
+
+    .amazonSellerSpecialText {
+      margin-bottom: 20px !important;
+      @include font-semi-bold($fs: 1.4rem !important);
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 66px;
+
+    &Heading {
+      margin-bottom: 16px;
+    }
+
+    &ParaGraph {
+      @include font-reg(1.4rem);
+      margin-bottom: 20px;
+    }
+
+    &Image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.amazonSellerBannerData {
+  flex-basis: 46.8% !important;
+}
+
+.amazonSellerBannerParaData {
+  max-width: 535px !important;
+  margin-bottom: 32px !important;
+}
+
+.amazonSellerBannerImage {
+  max-width: 46.4% !important;
+}
+
+.amazonSellerSpecialText {
+  margin-bottom: 23px !important;
+  @include font-semi-bold($fs: 2.4rem !important);
+  line-height: 150%;
+  color: $color-black-0;
+}
+
+.payLaterDirectRemoveTextTransform {
+  text-transform: none !important;
+}

@@ -1,0 +1,175 @@
+@import "/src/styles/variables.scss";
+
+.article {
+  padding: 30px 0;
+
+  &Filter {
+    @include d-flex();
+    gap: 14px;
+    align-items: flex-start;
+    padding-bottom: 30px;
+
+    span {
+      color: #222529;
+      @include font-med(1.6rem);
+      line-height: 150%;
+      border-radius: 8px;
+      background: #f7f7f7;
+      padding: 8px 16px;
+      cursor: pointer;
+    }
+
+    .activeFilter {
+      color: #fff;
+      @include font-med(1.6rem);
+      line-height: 150%;
+      background: #19147b;
+    }
+  }
+
+  &Date {
+    @include d-flex();
+    gap: 8px;
+    margin-bottom: 8px;
+
+    span {
+      color: #e54696;
+      @include font-reg(1.4rem);
+      line-height: 160%;
+      text-transform: capitalize;
+    }
+
+    &Line {
+      color: #000 !important;
+      width: 1px;
+    }
+  }
+
+  &Blogs {
+    @include d-flex();
+    gap: 40px;
+    border-top: 1px solid #e8e8e4;
+    padding: 30px 0 64px 0;
+    flex-wrap: wrap;
+  }
+
+  &SingleBlog {
+    border-radius: 6px;
+    background: #fff;
+    padding: 20px;
+    @include d-flex(space-between);
+    align-items: flex-start;
+    flex-direction: column;
+    height: 313px;
+
+    h3 {
+      color: #222529;
+      @include font-semi-bold(1.8rem);
+      line-height: 160%;
+      max-width: 403px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #4e4e4e;
+      @include font-reg(1.4rem);
+      line-height: 160%;
+      max-width: 403px;
+    }
+  }
+
+  &ViewMore {
+    @include d-flex(center);
+    gap: 6px;
+
+    span {
+      cursor: pointer;
+      background: var(
+        --Primary-Brand-Gradient,
+        linear-gradient(
+          90deg,
+          #131d56 -1.66%,
+          #33145d 26.58%,
+          #63166a 53.17%,
+          #a4267b 72.03%,
+          #db327c 87.36%,
+          #eb4b46 103.24%
+        )
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font-med(1.6rem);
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 20px 0;
+
+    &Filter {
+      padding-bottom: 20px;
+    }
+
+    &Blogs {
+      gap: 18px;
+      padding: 20px 0 0px 0;
+    }
+
+    &SingleBlog {
+      // max-width: 100%;
+      height: 100%;
+      gap: 8px;
+
+      h3 {
+        max-width: 100%;
+      }
+
+      p {
+        margin-bottom: 48px;
+      }
+    }
+
+    &ViewMore {
+      @include d-flex(center);
+      gap: 6px;
+      margin-top: 32px;
+
+      span {
+        cursor: pointer;
+        background: var(
+          --Primary-Brand-Gradient,
+          linear-gradient(
+            90deg,
+            #131d56 -1.66%,
+            #33145d 26.58%,
+            #63166a 53.17%,
+            #a4267b 72.03%,
+            #db327c 87.36%,
+            #eb4b46 103.24%
+          )
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @include font-med(1.6rem);
+      }
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.firstBlog {
+  max-width: 373px;
+  background: #f7f7f7;
+}
+
+.imageHeight {
+  height: 32px;
+}

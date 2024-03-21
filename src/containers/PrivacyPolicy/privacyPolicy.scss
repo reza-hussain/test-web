@@ -1,0 +1,134 @@
+@import "/src/styles/variables.scss";
+
+.privacyPolicy {
+  padding: 80px 0 0;
+
+  &Container {
+    padding: 56px 0 !important;
+  }
+
+  &CommonHeading {
+    h1 {
+      color: $color-grey-0;
+      font-size: 4rem !important;
+      text-align: left !important;
+      font-family: EchoesSansMedium;
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &Label {
+    color: #4e4e4e !important;
+    @include font-semi-bold($fs: 1.8rem !important);
+    font-weight: 600 !important;
+    line-height: 150% !important;
+    // padding: 24px 0 1px !important;
+  }
+
+  &Description ul,
+  p,
+  ol,
+  span {
+    color: #4e5779;
+    @include font-reg($fs: 1.6rem);
+    line-height: 160%;
+    // padding-top: 15px;
+  }
+
+  &SubHeading {
+    @include font-semi-bold($fs: 1.6rem !important);
+    font-weight: 600 !important;
+    color: $color-grey-0 !important;
+    line-height: 160% !important;
+    padding: 16px 0 9px;
+    // margin-left: 32px;
+  }
+
+  li {
+    padding-top: 15px;
+    color: #4e5779;
+    @include font-reg($fs: 1.6rem);
+    line-height: 160%;
+    list-style-type: none;
+  }
+
+  div {
+    padding-top: 15px;
+    color: #4e5779;
+    @include font-reg($fs: 1.6rem);
+    line-height: 160%;
+
+    a {
+      color: $color-Pink-0;
+      text-decoration: underline;
+    }
+  }
+
+  ol,
+  ul {
+    padding-left: 32px;
+    list-style-type: disc !important;
+  }
+
+  .underline {
+    @include font-semi-bold($fs: 1.6rem);
+    color: #4e4e4e;
+    padding-bottom: 9px;
+    display: inline-block;
+  }
+
+  &Description {
+    a {
+      color: $color-Pink-0;
+      text-decoration: underline;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 67px 0 0px !important;
+
+    &Container {
+      padding: 40px 24px !important;
+    }
+
+    &SubHeading {
+      padding: 0 !important;
+    }
+
+    &CommonHeading {
+      h1 {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        padding-top: 35px;
+      }
+    }
+
+    &Label {
+      font-size: 14px !important;
+    }
+
+    li {
+      padding-top: 5px;
+    }
+
+    &Description ul,
+    li,
+    p,
+    ol,
+    span,
+    div,
+    a {
+      font-size: 1.4rem;
+      margin-bottom: 4px;
+    }
+
+    ol,
+    ul {
+      padding-left: 16px;
+    }
+
+    div {
+      padding-top: 5px !important;
+    }
+  }
+}

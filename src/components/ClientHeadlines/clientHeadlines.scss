@@ -1,0 +1,232 @@
+@import "/src/styles/variables.scss";
+
+.splide__track--draggable {
+  margin-bottom: 40px;
+}
+
+.cardsData {
+  background: #f7f7f7 !important;
+  padding: 80px 24px 80px !important;
+
+  .commonHeading {
+    margin-bottom: 64px !important;
+  }
+}
+
+.splide__slide {
+  // width: fit-content !important;
+}
+
+.articleLogoImg {
+  height: 32px;
+}
+
+.homeSliderContainer {
+  margin-left: auto;
+  overflow: hidden;
+  // width: calc(50vw + 616px);
+  width: calc((100vw - 1275px) / 2 + 1230px - 24px);
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+button.splide__arrow::before {
+  border: 1px solid #19147b;
+}
+
+button.splide__arrow.splide__arrow--next::after {
+  background-image: url("../../assets/images/founder/nextIcon.svg") !important;
+  display: none !important;
+}
+
+button.splide__arrow.splide__arrow--prev::after {
+  background-image: url("../../assets/images/founder/previousIcon.svg") !important;
+  display: none !important;
+}
+
+.splide__pagination {
+  display: none !important;
+}
+.splide__arrows {
+  position: relative;
+  @include d-flex(center);
+}
+
+.splide__arrows--ltr {
+  position: relative;
+  @include d-flex(center);
+}
+
+.splide__arrow--next {
+  top: 27.2em;
+  right: 44%;
+  //   left: 0;
+  bottom: 0;
+}
+
+.splide__arrow--prev {
+  top: 27.2em;
+  left: 44%;
+  bottom: 0;
+}
+
+button.splide__arrow {
+  display: none !important;
+}
+
+.disabled {
+  cursor: default !important;
+  opacity: 0.3;
+}
+
+.counter {
+  @include d-flex(center);
+  position: relative;
+
+  &Img {
+    border-radius: 32px;
+    border: 1px solid #19147b;
+    padding: 8px;
+    cursor: pointer;
+  }
+
+  &Navigator {
+    @include d-flex();
+    gap: 6px;
+    position: absolute;
+    right: 8%;
+    top: 2px;
+    cursor: pointer;
+
+    p {
+      background: linear-gradient(
+        90deg,
+        #131d56 -1.66%,
+        #33145d 26.58%,
+        #63166a 53.17%,
+        #a4267b 72.03%,
+        #db327c 87.36%,
+        #eb4b46 103.24%
+      ) !important;
+      background-clip: text !important;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font-med(1.6rem);
+    }
+  }
+
+  span {
+    color: #888;
+    @include font-med(1.4rem);
+    line-height: 150%;
+    @include d-flex();
+    gap: 12px;
+  }
+}
+
+.counter {
+  &Responsive {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .splide__track--draggable {
+    margin-bottom: 10px;
+  }
+
+  .cardsData {
+    padding: 40px 24px !important;
+
+    .commonHeading {
+      margin-bottom: 40px !important;
+    }
+  }
+
+  .homeSliderContainer {
+    width: 100% !important;
+  }
+
+  .splide__arrow--next {
+    right: 44%;
+    //   left: 0;
+    bottom: 0;
+  }
+  //   .previousArrow {
+  //     right: 0 !important;
+  //     top: 0 !important;
+  //   }
+
+  //   .nextArrow {
+  //     right: 0 !important;
+  //     top: 0 !important;
+  //   }
+
+  //   .splideArrow {
+  //     top: 0 !important;
+  //   }
+}
+
+@media (max-width: 992px) {
+  .splide__arrow--prev {
+    top: 23.9em;
+    left: 43%;
+    bottom: 0;
+  }
+
+  .counter {
+    display: none;
+  }
+
+  .counter {
+    &Responsive {
+      @include d-flex(center);
+      flex-direction: column;
+      gap: 24px;
+
+      &Img {
+        border-radius: 32px;
+        border: 1px solid #19147b;
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      &Navigator {
+        @include d-flex();
+        gap: 6px;
+        cursor: pointer;
+
+        p {
+          background: linear-gradient(
+            90deg,
+            #131d56 -1.66%,
+            #33145d 26.58%,
+            #63166a 53.17%,
+            #a4267b 72.03%,
+            #db327c 87.36%,
+            #eb4b46 103.24%
+          ) !important;
+          background-clip: text !important;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          @include font-med(1.6rem);
+        }
+      }
+
+      span {
+        color: #888;
+        @include font-med(1.4rem);
+        line-height: 150%;
+        @include d-flex();
+        gap: 12px;
+      }
+    }
+  }
+
+  .splide__arrow--next {
+    top: 23.9em;
+    right: 43%;
+    bottom: 0;
+  }
+}

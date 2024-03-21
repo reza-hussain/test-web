@@ -1,0 +1,145 @@
+@import "/src/styles/variables.scss";
+
+.smeJobs {
+  background: $color-gray-5 !important;
+  padding: 80px 0 !important;
+
+  &InvestorData {
+    @include font-reg($fs: 1.6rem);
+    line-height: 160%;
+    color: $color-grey-0;
+  }
+
+  &Container {
+    max-width: 948px !important;
+  }
+
+  &Heading {
+    margin-bottom: 16px !important;
+  }
+
+  &Text {
+    background: $linear-gradient-11 !important;
+    background-clip: text;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  // accordion
+  h3 {
+    color: $color-black-0;
+    @include font-med(2rem);
+    font-family: EchoesSansMedium;
+  }
+
+  &Title {
+    @include d-flex(space-between);
+    transition: padding 0.2s ease-in-out;
+    padding: 24px 0;
+    cursor: pointer;
+
+    &:last-child {
+      padding: 24px 0 0;
+    }
+  }
+
+  .active {
+    padding: 40px 0 16px;
+  }
+
+  &Contents {
+    p {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      margin: 24px 0 16px;
+      line-height: 160%;
+      max-width: 828px;
+
+      &:first-child {
+        margin: 0;
+      }
+    }
+
+    border-bottom: 1px solid $color-gray-3;
+    padding: 0 0 24px;
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    padding: 40px 0 36px !important;
+
+    // accordion
+    h3 {
+      @include font-med(1.8rem);
+    }
+
+    &Title {
+      padding: 24px 0;
+      gap: 40px;
+    }
+
+    .active {
+      padding: 24px 0 16px;
+    }
+
+    &Contents {
+      p {
+        max-width: 100%;
+        @include font-reg(1.4rem);
+        line-height: 150%;
+      }
+
+      padding: 0 0 24px;
+    }
+
+    .payLaterDirectAccordionListStyles {
+      li {
+        font-size: 1.4rem;
+        line-height: 150%;
+        max-width: 100%;
+        padding-top: 5px;
+      }
+    }
+
+    .payLaterDirectReduceFontSize {
+      font-size: 1.8rem !important;
+    }
+  }
+}
+
+.payLaterDirectAccordionListStyles {
+  list-style-type: disc !important;
+
+  li {
+    color: $color-grey-0;
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-left: 30px;
+    line-height: 160%;
+    max-width: 828px;
+    padding-top: 5px;
+  }
+}
+
+.payLaterDirectAccordionContent {
+  color: $color-grey-0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 160%;
+  max-width: 828px;
+  padding-top: 20px;
+  display: block;
+}
+
+.payLaterDirectReduceFontSize {
+  font-size: 4rem !important;
+  padding-bottom: 16px !important;
+}
+
+.amazonSellerBackground {
+  background: $color-white-0 !important;
+}
+
+.amazonSellerFaqBottomGap {
+  margin-bottom: 56px !important;
+}

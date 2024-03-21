@@ -1,0 +1,341 @@
+@import "src/styles/variables.scss";
+
+.founder {
+  .commonHeading {
+    h1 {
+      background: linear-gradient(
+        90deg,
+        #131d56 43.45%,
+        #33145d 54.99%,
+        #63166a 65.76%,
+        #a4267b 77.45%,
+        #db327c 88.22%,
+        #eb4b46 100.53%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      @include font-semi-bold(4.4rem);
+      line-height: 130%;
+      margin-bottom: 64px;
+    }
+  }
+
+  &Card {
+    @include d-flex();
+    align-items: stretch;
+    gap: 18px;
+
+    &List {
+      @include d-flex;
+      gap: 18px;
+      flex-direction: column;
+      //   flex-basis: 91%;
+    }
+
+    &Bg {
+      padding: 20px;
+      max-width: 780px;
+      position: relative;
+      border-radius: 10px;
+      border: 1px solid #e4e4e4;
+      background: url("../../assets/images/founder/bgImg.svg"),
+        linear-gradient(
+          90deg,
+          rgba(19, 29, 86, 0.06) -1.66%,
+          rgba(51, 20, 93, 0.06) 26.58%,
+          rgba(99, 22, 106, 0.06) 53.17%,
+          rgba(164, 38, 123, 0.06) 72.03%,
+          rgba(219, 50, 124, 0.06) 87.36%,
+          rgba(235, 75, 70, 0.06) 103.24%
+        );
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+  }
+
+  &Details {
+    width: 81%;
+
+    h1 {
+      color: var(--Primary-Primary, #19147b);
+      @include font-semi-bold(2rem);
+      line-height: 130%;
+      letter-spacing: 0.4px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &DateTime {
+    @include d-flex();
+    gap: 16px;
+    margin-bottom: 28px;
+  }
+
+  &Year {
+    @include d-flex();
+    gap: 6px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+
+    span {
+      color: var(--Gray-Shade-1, #4e4e4e);
+      @include font-reg(1.4rem);
+      line-height: 150%;
+    }
+  }
+
+  &Podcast {
+    border-radius: 4px;
+    padding: 10px 18px;
+    @include d-flex(space-between);
+    cursor: pointer;
+    gap: 10px;
+    width: fit-content;
+    background: var(
+      --Primary-Brand-Gradient,
+      linear-gradient(
+        90deg,
+        #131d56 -1.66%,
+        #33145d 26.58%,
+        #63166a 53.17%,
+        #a4267b 72.03%,
+        #db327c 87.36%,
+        #eb4b46 103.24%
+      )
+    );
+
+    &:hover {
+      background: $color-darkBlue-1;
+
+      // svg {
+      //   transform: translate(6px);
+      //   transition: all 0.8s ease;
+      // }
+    }
+
+    // svg {
+    //   transition: all 0.5s ease;
+    // }
+
+    span {
+      color: var(--Primary-White, var(--Color, #fff));
+      @include font-med(1.3rem);
+      line-height: normal;
+    }
+  }
+
+  &Description {
+    @include d-flex(space-between);
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    flex-basis: 34%;
+    border: 1px solid #e4e4e4;
+    padding: 20px;
+    background: linear-gradient(
+      90deg,
+      rgba(19, 29, 86, 0.06) -1.66%,
+      rgba(51, 20, 93, 0.06) 26.58%,
+      rgba(99, 22, 106, 0.06) 53.17%,
+      rgba(164, 38, 123, 0.06) 72.03%,
+      rgba(219, 50, 124, 0.06) 87.36%,
+      rgba(235, 75, 70, 0.06) 103.24%
+    );
+
+    h2 {
+      color: var(--Primary-Primary, #19147b);
+      @include font-semi-bold(2rem);
+      line-height: 130%;
+      margin-bottom: 12px;
+      max-width: 362px;
+    }
+
+    p {
+      color: #4e4e4e;
+      @include font-reg(1.4rem);
+      line-height: 150%;
+      max-width: 362px;
+      margin-bottom: 12px;
+    }
+  }
+
+  &Img {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -167px;
+      bottom: 0;
+      right: -20px;
+    }
+  }
+
+  &Deep {
+    img {
+      position: absolute;
+      bottom: 0;
+      right: -0;
+      max-width: 164px;
+    }
+  }
+
+  &Vikram {
+    position: relative;
+
+    img {
+      position: absolute;
+      top: -160px;
+      bottom: 0;
+      max-width: 164px;
+      right: -20px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .commonHeading {
+      h1 {
+        @include font-semi-bold(2.4rem);
+        margin-bottom: 40px;
+      }
+    }
+    &Card {
+      flex-direction: column;
+
+      &Bg {
+        width: 100%;
+        max-width: 100%;
+        min-height: 385px;
+      }
+    }
+
+    &Details {
+      width: 100%;
+
+      h1 {
+        @include font-semi-bold(1.8rem);
+        letter-spacing: 0.36px;
+      }
+    }
+
+    &DateTime {
+      margin-bottom: 28px;
+    }
+
+    &Description {
+      flex-basis: 100%;
+
+      h2 {
+        @include font-semi-bold(1.8rem);
+        max-width: 100%;
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    &Deep {
+      height: 250px;
+      width: 225px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      img {
+        border-radius: 0 10px 10px 0;
+        // height: 100%;
+        object-fit: fill;
+        // width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &Vikram {
+      img {
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+.audioContainer {
+  width: 100%;
+  border: 1px solid rgba(229, 70, 150, 0.3);
+  border-radius: 200px;
+
+  audio {
+    width: 100%;
+    display: flex;
+
+    &::-webkit-media-controls-panel {
+      border-radius: 200px;
+      background: #ffeff7;
+      padding: 15px 14px;
+      width: 100%;
+    }
+
+    &::-webkit-media-controls-current-time-display {
+      color: #222529;
+      @include font-reg(1.4rem);
+    }
+
+    &::-webkit-media-controls-time-remaining-display {
+      color: #222529;
+      @include font-reg(1.4rem);
+    }
+  }
+}
+
+.audioTag {
+  border: 1px solid rgba(229, 70, 150, 0.3);
+  border-radius: 200px;
+  width: fit-content;
+  margin: 0 auto;
+  position: fixed;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9;
+
+  audio {
+    display: flex;
+
+    &::-webkit-media-controls-panel {
+      border-radius: 200px;
+      background: #ffeff7;
+      padding: 15px 14px;
+      width: 100%;
+    }
+
+    &::-webkit-media-controls-current-time-display {
+      color: #222529;
+      @include font-reg(1.4rem);
+    }
+
+    &::-webkit-media-controls-time-remaining-display {
+      color: #222529;
+      @include font-reg(1.4rem);
+    }
+  }
+
+  .closeAudio {
+    position: absolute;
+    right: -5px;
+    top: -11px;
+    padding: 5.6px;
+    border-radius: 22.4px;
+    border: 0.5px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 0px 3px 11px 0px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.disableAudio {
+  pointer-events: none;
+  opacity: 0.6;
+}

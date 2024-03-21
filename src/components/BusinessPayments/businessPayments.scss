@@ -1,0 +1,109 @@
+@import "/src/styles/variables.scss";
+
+// businessPayment
+.payments {
+  background: $color-white-2 !important;
+  background-position: top left;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+
+  &ParaGraph {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  &Gradient {
+    background: $linear-gradient-6 !important;
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  &LeftImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &RightImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &Content {
+    margin-bottom: 40px;
+
+    h2 {
+      text-transform: capitalize;
+      max-width: 787px;
+      margin: 0 auto 24px;
+    }
+  }
+
+  &Data {
+    max-width: 973px;
+    margin: 0 auto;
+    text-align: center;
+    @include d-flex(center);
+    flex-direction: column;
+
+    p {
+      color: $color-grey-0;
+      @include font-reg(1.6rem);
+      line-height: 160%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  // finance
+  .payLaterFinance {
+    &Content {
+      flex-direction: column-reverse;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    &SpecialText {
+      @include font-reg(1.4rem);
+    }
+
+    &Image {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  // payments
+  .payments {
+    background: $color-white-2 !important;
+    &LeftImg {
+      display: none;
+    }
+    &RightImg {
+      display: none;
+    }
+    &Content {
+      h2 {
+        font-size: 2.4rem;
+        max-width: 100%;
+        margin: 0 auto 16px;
+      }
+      p {
+        font-size: 1.4rem;
+        line-height: 150%;
+      }
+    }
+    &Btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}

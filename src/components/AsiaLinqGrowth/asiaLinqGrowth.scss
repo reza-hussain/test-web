@@ -1,0 +1,83 @@
+@import "/src/styles/variables.scss";
+
+.asiaLinq {
+  background: #fff !important;
+
+  &Growth {
+    border-radius: 8px;
+    background: url(../../assets/images/investor/bgImage.png),
+      $linear-gradient-1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    padding: 64px 100px;
+
+    h3 {
+      color: $color-white-0;
+      @include font-semi-bold(4.4rem);
+      line-height: 130%;
+      margin-bottom: 40px;
+    }
+
+    &Data {
+      @include d-flex(space-between);
+    }
+
+    &Number {
+      color: $color-white-0;
+      font-family: EchoesSans;
+      @include font-med(4rem);
+      line-height: normal;
+    }
+
+    &Para {
+      color: $color-gray-4;
+      @include font-reg(1.6rem);
+      line-height: normal;
+      max-width: 238px;
+      padding-top: 4px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &Growth {
+      border-radius: 8px;
+      background: url(../../assets/images/investor/bgMobileImg.png),
+        $linear-gradient-1;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: bottom right;
+      padding: 24px;
+
+      h3 {
+        @include font-semi-bold(2.4rem);
+        text-align: center;
+      }
+
+      &Data {
+        flex-direction: column;
+        text-align: center;
+        gap: 26px;
+      }
+
+      &Number {
+        @include font-med(2.2rem);
+      }
+
+      &Para {
+        @include font-reg(1.4rem);
+        max-width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 370px) {
+    &Growth {
+      &Data {
+        &Text {
+          max-width: 208px;
+        }
+      }
+    }
+  }
+}

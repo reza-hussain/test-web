@@ -1,0 +1,84 @@
+@import "/src/styles/variables.scss";
+
+.partner {
+  &Divider {
+    @include d-flex();
+    gap: 64px;
+
+    &Data {
+      flex-basis: 54%;
+
+      &Heading {
+        text-align: left;
+        max-width: 565px;
+        margin-bottom: 16px !important;
+      }
+    }
+
+    &Para {
+      color: $color-black-0;
+      @include font-reg(1.6rem);
+      line-height: 160%;
+      margin-bottom: 16px;
+    }
+
+    &Content {
+      flex-basis: 50.8%;
+
+      &Part {
+        @include d-flex();
+        align-items: flex-start;
+        gap: 20px;
+        margin-bottom: 40px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      &Description {
+        color: $color-black-0;
+        @include font-reg(1.6rem);
+        line-height: 160%;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &Divider {
+      flex-direction: column;
+      gap: 40px;
+
+      &Data {
+        flex-basis: 100%;
+
+        &Heading {
+          text-align: center;
+          max-width: 100%;
+          margin-bottom: 20px !important;
+        }
+      }
+
+      &Para {
+        color: $color-black-0;
+        @include font-reg(1.4rem);
+        line-height: 150%;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      &Content {
+        flex-basis: 100%;
+
+        &Part {
+          margin-bottom: 30px;
+        }
+
+        &Description {
+          @include font-reg(1.4rem);
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,249 @@
+@import "src/styles/variables.scss";
+@import "src/styles/common.scss";
+
+// credilinqBenefits
+.credilinqBenefits {
+  background: $linear-gradient-10 !important;
+
+  &Gap {
+    margin-bottom: 16px !important;
+  }
+
+  &Gradient {
+    background: $color-gray-5 !important;
+
+    &Text {
+      background: $linear-gradient-6 !important;
+      background-clip: text;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+  }
+
+  &Class {
+    // todo display: block;
+  }
+
+  &Heading {
+    max-width: 670px;
+    text-align: inherit !important;
+    color: $color-black-0 !important;
+  }
+
+  &Gradient {
+    font-size: 4.4rem !important;
+    background: url(../../assets/images/home/backgroundImage.svg),
+      $linear-gradient-2 !important;
+    background-position: 115% 100% !important;
+    background-repeat: no-repeat !important;
+  }
+
+  &FullPara {
+    margin-bottom: 0;
+    @include font-reg(1.6rem);
+    max-width: 413px;
+    color: $color-grey-0;
+    text-transform: capitalize;
+    line-height: 160%;
+  }
+
+  &FirstCard {
+    border-radius: 8px;
+    background: var(--White, $color-white-0);
+    box-shadow: 2px 4px 40px 0px rgba(0, 0, 0, 0.06);
+    padding: 32px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+    .img_gif {
+      display: none;
+    }
+
+    .img_png {
+      width: 60px;
+      display: block;
+    }
+
+    &:hover {
+      transition: all 0.5s ease;
+      box-shadow: 2px 24px 96px 0px rgba(0, 0, 0, 0.09);
+
+      .img_png {
+        display: none;
+      }
+
+      .img_gif {
+        display: block;
+        width: 60px;
+      }
+    }
+  }
+
+  .linear {
+    padding: 1px;
+    border-radius: 10px;
+    width: 100%;
+
+    &:hover {
+      background: $linear-gradient-3;
+    }
+  }
+
+  &HeaderData {
+    max-width: 201px !important;
+  }
+
+  &Width {
+    max-width: 723px;
+
+    &Data {
+      max-width: 413px;
+    }
+  }
+
+  &Section {
+    @include d-flex(space-between);
+    gap: 64px;
+    align-items: flex-start;
+  }
+
+  &MultipleCards {
+    @include d-flex(space-between);
+    max-width: 990px;
+    gap: 40px;
+    align-items: inherit;
+  }
+
+  &Card {
+    @include d-flex();
+    gap: 40px;
+    flex-direction: column;
+
+    img {
+      width: 60px;
+    }
+
+    &:first-child {
+      margin-top: 44px;
+    }
+  }
+
+  &SecondData {
+    margin-bottom: 24px !important;
+
+    h3 {
+      max-width: 201px !important;
+    }
+  }
+
+  &Title {
+    @include d-flex(space-between);
+    gap: 16px;
+    margin-bottom: 24px;
+
+    h3 {
+      color: var(--Text, $color-black-0);
+      @include font-med(2rem);
+      line-height: 130%;
+      font-family: EchoesSansMedium;
+      max-width: 161.5px;
+    }
+
+    &Para {
+      p {
+        margin-bottom: 0;
+        @include font-reg(1.6rem);
+        max-width: 406px;
+        color: $color-grey-0;
+        line-height: 150%;
+      }
+
+      &Graph {
+        //TO DO min-height: 72px;
+      }
+    }
+  }
+
+  // responsive
+  @media (max-width: 992px) {
+    // credilinqBenefits
+    &FullPara {
+      max-width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+      @include font-reg($fs: 1.4rem);
+      line-height: 150%;
+      text-transform: none;
+    }
+
+    &HeaderData {
+      max-width: 100% !important;
+    }
+
+    &Width {
+      max-width: 100%;
+
+      &Data {
+        max-width: 100%;
+      }
+    }
+
+    &FirstCard {
+      padding: 24px;
+    }
+
+    &Heading {
+      max-width: 100%;
+      text-align: center;
+    }
+
+    &Section {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    &MultipleCards {
+      flex-wrap: wrap;
+      max-width: 100%;
+      gap: 24px;
+    }
+
+    &Card {
+      gap: 24px;
+      width: 100%;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &SecondData {
+      margin-bottom: 14px !important;
+    }
+
+    &Title {
+      @include d-flex(space-between);
+      gap: 16px;
+      margin-bottom: 14px;
+
+      h3 {
+        @include font-med(1.8rem);
+        font-weight: 500;
+        line-height: 130%;
+        max-width: 100% !important;
+      }
+
+      &Para {
+        p {
+          text-align: inherit !important;
+          @include font-reg(1.4rem !important);
+          margin: 0;
+        }
+
+        &Graph {
+          min-height: 0;
+        }
+      }
+    }
+  }
+}

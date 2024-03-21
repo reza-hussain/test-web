@@ -1,0 +1,66 @@
+@import "/src/styles/variables.scss";
+
+.investorBanner {
+  margin-top: 80px;
+  padding: 100px 0 !important;
+
+  &Container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &Section {
+    p {
+      @include font-reg($fs: 1.8rem);
+      line-height: 150%;
+      color: $color-grey-0;
+      max-width: 556px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &Heading {
+    max-width: 640px;
+  }
+
+  &Image {
+    max-width: 370px;
+    align-self: center;
+  }
+
+  // todo &Gradient {
+  //   display: block;
+  // }
+
+  @media (max-width: 992px) {
+    margin-top: 66px;
+    padding: 40px 0 !important;
+
+    &Container {
+      flex-direction: column;
+      gap: 70px;
+    }
+
+    &Section {
+      text-align: center;
+      p {
+        @include font-reg($fs: 1.4rem);
+        color: $color-black-0;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    &Heading {
+      max-width: 100%;
+    }
+
+    &Gradient {
+      display: inline;
+    }
+
+    &Image {
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,199 @@
+@import "src/styles/variables.scss";
+@import "src/styles/common.scss";
+
+.advantage {
+  &Wrapper {
+    display: flex;
+    gap: 40px;
+    padding-top: 32px;
+  }
+
+  &Section {
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 4px 4px 45px 0px rgba(133, 31, 116, 0.06);
+  }
+
+  &Image {
+    width: 373px;
+
+    img {
+      border-radius: 8px 0;
+    }
+  }
+
+  &Contents {
+    padding: 24px;
+
+    h3 {
+      color: $color-black-0;
+      @include font-med($fs: 2rem);
+      line-height: 130%;
+      padding-bottom: 16px;
+      font-family: EchoesSansMedium;
+    }
+
+    p {
+      color: $color-grey-0;
+      @include font-reg($fs: 1.6rem);
+      line-height: 160%;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &CommonHeading {
+      @include font-semi-bold($fs: 2.4rem);
+      line-height: 130%;
+    }
+
+    &Image {
+      width: 100%;
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+
+    &Wrapper {
+      flex-direction: column;
+      padding-top: 24px;
+      gap: 24px;
+    }
+
+    &Contents {
+      padding: 16px;
+
+      h3 {
+        @include font-med($fs: 1.8rem);
+        padding-bottom: 12px;
+      }
+
+      p {
+        @include font-reg($fs: 1.4rem);
+        line-height: 150%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    &Gradient {
+      display: block;
+    }
+  }
+}
+
+// Scroll Section
+
+.embedded {
+  background: $linear-gradient-9 !important;
+  padding: 100px 0 44px !important;
+
+  &Section {
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    position: relative;
+  }
+
+  &Heading {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+
+    h2 {
+      @include font-semi-bold($fs: 4.4rem);
+      line-height: 130%;
+      color: $color-black-0;
+      max-width: 568px;
+      text-transform: capitalize;
+    }
+
+    span {
+      background: $linear-gradient-7;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      padding-top: 24px;
+      color: $color-grey-0;
+      line-height: 130%;
+      @include font-med($fs: 3.2rem);
+      font-family: EchoesSans;
+    }
+  }
+
+  &Contents {
+    flex-basis: 47.4%;
+  }
+
+  &Content {
+    padding: 56px 0 0;
+
+    &:not(:last-child)::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $linear-gradient-8;
+    }
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  &Contents {
+    p {
+      @include font-reg($fs: 1.6rem);
+      color: $color-grey-0;
+      line-height: 160%;
+      max-width: 520px;
+      padding: 24px 0 56px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 40px 0 8px !important;
+    &Section {
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    &Contents {
+      flex-basis: 100%;
+    }
+
+    &Heading {
+      position: inherit;
+      top: 0;
+
+      h2 {
+        @include font-semi-bold($fs: 2.4rem);
+        color: $color-black-0;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      p {
+        @include font-med($fs: 2rem);
+        padding: 16px 0 0;
+      }
+    }
+
+    &Contents {
+      p {
+        @include font-reg($fs: 1.4rem);
+        line-height: 150%;
+        max-width: 100%;
+        padding: 24px 0 32px;
+      }
+    }
+
+    &Content {
+      padding-top: 32px;
+    }
+  }
+}
